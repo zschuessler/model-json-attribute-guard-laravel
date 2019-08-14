@@ -18,6 +18,37 @@ class TestCase extends OrchestraTestCase
     public function setUp(): void
     {
         parent::setUp();
+
+        $this->loadMigrationsFrom(__DIR__ . '/database/migrations');
+    }
+
+    /**
+     * Trick to add migration only for testing,
+     * and not the one from package service provider
+     *
+     * @param Application $app
+     *
+     * @return string
+     */
+    protected function getPackageProviders($app)
+    {
+        return ConsoleServiceProvider::class;
+    }
+
+    /**
+     * Define environment setup
+     *
+     * @param Application $app
+     *
+     * @return void
+     */
+    protected function getEnvironmentSetUp($app)
+    {
+        $app['config']->set('database.default', 'testbench');
+        $app['config']->set('database.connections.testbench', [
+            'driver'   => 'sqlite',
+            'database' => ':memory:',
+        ]);
     }
 
     /**

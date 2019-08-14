@@ -15,7 +15,7 @@
     },
     "autoload-dev": {
       "psr-4": {
-        "Zschuessler\\ModelJsonAttributeGuard\\Test\\": "tests"
+        "Zschuessler\\ModelJsonAttributeGuard\\Test\\": "tests/"
       }
     }
   },
@@ -39,7 +39,7 @@
     }
   },
   "scripts": {
-    "test": "vendor/bin/phpunit"
+    "test": "./vendor/bin/phpunit"
   },
   "minimum-stability": "dev"
 }
