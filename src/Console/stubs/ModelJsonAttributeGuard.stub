@@ -1,0 +1,22 @@
+<?php
+
+namespace $CLASS_NAMESPACE$;
+
+use $EXTENDED_CLASS$;
+
+class $COLUMN_BASENAME$JsonAttributeGuard extends $EXTENDED_CLASS_BASENAME$
+{
+
+    /**
+     * Schema
+     *
+     * Return an array of Laravel Validator rules to enforce a schema for this column.
+     * @return array
+     */
+    public function schema() : array
+    {
+        return [
+
+        ];
+    }
+}
