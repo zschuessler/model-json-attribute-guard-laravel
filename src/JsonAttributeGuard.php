@@ -108,6 +108,7 @@ class JsonAttributeGuard
     {
         $currentValue = $this->getValue();
 
+        // If already an object, encode it to a string for editing
         if (!is_string($currentValue)) {
             return json_encode($currentValue);
         }

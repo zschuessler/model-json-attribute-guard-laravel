@@ -78,7 +78,9 @@ trait HasJsonAttributeGuards
             $customGuard = $this->getJsonAttributeGuard($attribute);
             $customGuard->validate($value);
 
-            $this->attributes[$attribute] = json_encode($value);
+            // A final decode/encode will strip whitespace and minify the json
+            $cleanedValue = json_encode(json_decode($value));
+            $this->attributes[$attribute] = $cleanedValue;
 
             return $this;
         }
