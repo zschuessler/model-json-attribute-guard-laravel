@@ -60,6 +60,10 @@ class JsonAttributeGuard
      */
     public function validate($value)
     {
+        // If not already cast to object, cast it
+        if (is_string($value)) {
+            $value = json_decode($value, true);
+        }
         // Cast any child objects to an array first, to be compatible with Laravel's Validator
         $validatorData = json_decode(json_encode($value), true);
 
