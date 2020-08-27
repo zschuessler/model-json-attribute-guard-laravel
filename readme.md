@@ -115,7 +115,7 @@ $user->preferences = [
 $user->save();
 ```
 
-This code will throw a `JsonAttributeValidationFailedException` exception - oh no! Your model won't be saved.
+Great! But the code below will throw a `JsonAttributeValidationFailedException` exception - oh no! Your model won't be saved.
 
 ```
 $user->preferences = [
