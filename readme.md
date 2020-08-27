@@ -87,7 +87,7 @@ Let's tell Laravel we want our model to do a custom cast:
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Congress\SessionsJsonColumn;
+use App\Models\User\PreferencesJsonColumn;
 use Zschuessler\ModelJsonAttributeGuard\Traits\HasJsonAttributeGuards;
 
 class User extends Model
@@ -95,9 +95,8 @@ class User extends Model
     use HasJsonAttributeGuards;
 
     public $casts = [
-        'sessions' => SessionsJsonColumn::class
+        'preferences' => PreferencesJsonColumn::class
     ];
-
 ```
 
 ## Step 3: Success
