@@ -72,7 +72,6 @@ class JsonAttributeGuard
             $this->schema()
         );
 
-        // @todo: add custom exception to catch here
         if ($validator->fails()) {
             throw new JsonAttributeValidationFailedException(
                 'Validation failed for json column: ' . $validator->errors()->first()
