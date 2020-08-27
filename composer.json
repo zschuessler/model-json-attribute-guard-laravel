@@ -12,11 +12,11 @@
   "autoload": {
     "psr-4": {
       "Zschuessler\\ModelJsonAttributeGuard\\": "src/"
-    },
-    "autoload-dev": {
-      "psr-4": {
-        "Zschuessler\\ModelJsonAttributeGuard\\Test\\": "tests/"
-      }
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "Zschuessler\\ModelJsonAttributeGuard\\Test\\": "tests/"
     }
   },
   "require": {
